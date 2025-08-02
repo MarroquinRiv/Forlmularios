@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        fieldset {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+        
+        legend {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        div {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>★ Formulario</h1>
+    
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Datos</legend>
+            
+            <div>
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div>
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Selecciona tu opción</legend>
+            
+            <div>
+                <input type="radio" id="universidad" name="opcion" value="universidad">
+                <label for="universidad">Universidad</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="maestria" name="opcion" value="maestria">
+                <label for="maestria">Maestría</label>
+            </div>
+            
+            <div>
+                <label for="pais">País</label>
+                <select id="pais" name="pais">
+                    <option value="">Selecciona un país</option>
+                    <option value="mexico">México</option>
+                    <option value="españa">España</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="colombia">Colombia</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Campo con validación</legend>
+            
+            <div>
+                <label for="comentarios">Comentarios (required)</label>
+                <textarea id="comentarios" name="comentarios" rows="4" required placeholder="Escribe tus comentarios aquí..."></textarea>
+            </div>
+        </fieldset>
+        
+        <div class="button-container">
+            <button type="submit">ENVIAR</button>
+            <button type="reset">RESET</button>
+        </div>
+    </form>
+</body>
+</html>
